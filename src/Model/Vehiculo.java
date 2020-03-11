@@ -10,10 +10,10 @@ public abstract class Vehiculo {
 	public boolean movimiento;
 	protected int movBar;
 	protected int modeloVehiculo;
-	protected int rendimiento, velocidad, precio;
+	protected String rendimiento, velocidad, precio;
 	protected PApplet app;
 
-	public Vehiculo(PApplet app, int modeloVehiculo, int rendimiento, int velocidad, int precio) {
+	public Vehiculo(PApplet app, int modeloVehiculo, String rendimiento, String velocidad, String precio) {
 
 		this.precio = precio;
 		this.velocidad = velocidad;
@@ -28,6 +28,5 @@ public abstract class Vehiculo {
 
 	public abstract void pintar();
 
-	public abstract void Movimiento();
 }
 //PINTAR TEXTO app.text(
