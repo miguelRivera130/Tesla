@@ -57,7 +57,7 @@ public class UsuarioView {
 			correo = cp5.get(Textfield.class, "Correo").getText();
 			// Esto valida que un string sea igual a otro
 			if (contrasena.equals(confirmarContrasena) && contrasena != null) {
-				System.out.println("este si entra.");
+				//System.out.println("este si entra.");
 				logica.registrarUsuario(nombreDeUsusario, contrasena, correo);
 				validante = true;
 				cp5.remove("Nombre de usuario");

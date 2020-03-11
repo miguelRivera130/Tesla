@@ -2,9 +2,15 @@ package Model;
 
 import java.util.ArrayList;
 import Model.Usuario;
-
+import Model.Vehiculo;
+import Model.VehiculoDos;
+import Model.VehiculoTres;
+import Model.VehiculoUno;
+import processing.core.PApplet;
 
 public class Logica {
+
+	private ArrayList<Vehiculo> listaVehiculo;
 
 	private ArrayList<Usuario> listaUsuarios;
 
@@ -22,6 +28,7 @@ public class Logica {
 			System.out.println(usuario.getCorreo());
 			System.out.println("====================");
 		}
+
 	}
 
 }

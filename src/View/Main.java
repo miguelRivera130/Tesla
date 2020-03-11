@@ -2,6 +2,7 @@ package View;
 
 import Model.Logica;
 import View.UsuarioView;
+import View.VehiculoView;
 import processing.core.PApplet;
 import processing.core.PImage;
 
@@ -9,7 +10,8 @@ public class Main extends PApplet {
 
 	private int pantalla = 0;
 	private UsuarioView usuarioView;
-	PImage pantallaInicial;
+	private VehiculoView vehiculoView;
+	PImage pantallaInicial, fondo, modeloUno;
 
 	public static void main(String[] args) {
 		PApplet.main("View.Main");
@@ -21,8 +23,10 @@ public class Main extends PApplet {
 
 	public void setup() {
 		pantallaInicial = loadImage("./../data/pantallaInicial.png");
+		fondo = loadImage("./../data/fondo.png");
 
 		usuarioView = new UsuarioView(this);
+		vehiculoView = new VehiculoView(this);
 
 	}
 
@@ -32,16 +36,17 @@ public class Main extends PApplet {
 
 		switch (pantalla) {
 		case 0:
-			image(pantallaInicial, 0, 0,width, height);
+			image(pantallaInicial, 0, 0, width, height);
 			usuarioView.drawScreen();
 
 			if (usuarioView.isValidante() == true) {
 				pantalla = 1;
+
 			}
 			break;
 		case 1:
-			background(0);
-
+			image(fondo, 0, 0, width, height);
+			vehiculoView.cardScreen();
 			break;
 
 		default:

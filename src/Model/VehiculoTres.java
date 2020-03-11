@@ -4,23 +4,18 @@ import processing.core.PApplet;
 
 public class VehiculoTres extends Vehiculo {
 
-	public VehiculoTres(PApplet app, int modeloVehiculo, String rendimiento, String velocidad, String precio) {
-		super(app, modeloVehiculo, rendimiento, velocidad, precio);
+	public VehiculoTres(PApplet app, int modeloVehiculo, int cantidad, int precio) {
+
+		super(app, modeloVehiculo, cantidad, precio);
 		// TODO Auto-generated constructor stub
 
-		this.velocidad = (String) "420 km/h";
-		this.precio = (String) "3'400.000 USD";
-		this.rendimiento = (String) "3,5 millas";
+		this.modeloVehiculo = 3;
+		this.cantidad = cantidad;
+		// this.velocidad = (String) "420 km/h";
+		this.precio = (int) 3400000;
+		// this.rendimiento = (String) "3,5 millas";
 		this.modelo = app.loadImage("./../data/modeloRoadster.jpg");
 
 	}
 
-	@Override
-	public void pintar() {
-
-		app.image(this.modelo, (float) this.posX, (float) this.posY, (float) this.tamX, (float) this.posY + 100);
-		app.fill(0, 0, 0);
-		app.rect((float) this.posX, (float) this.posY, (float) this.tamX, (float) this.tamY);
-
-	}
 }
